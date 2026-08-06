@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 150" width="380" height="150">
+  <defs>
+    <style>
+      .logo-white-stroke { stroke: #FFFFFF; stroke-width: 2.8; fill: none; }
+      .logo-white-fill { fill: #FFFFFF; }
+      .logo-text-serif { font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif; fill: #FFFFFF; }
+      .logo-text-sans { font-family: 'Plus Jakarta Sans', 'Inter', sans-serif; fill: #FFFFFF; letter-spacing: 5px; font-weight: 600; }
+    </style>
+  </defs>
+  
+  <!-- Outer Monogram Box -->
+  <rect x="10" y="10" width="55" height="130" rx="4" class="logo-white-stroke"/>
+  
+  <!-- Interlocking JSC Monogram Lines -->
+  <!-- J Top bar and Stem -->
+  <path d="M 22 25 L 53 25 M 38 25 L 38 105 C 38 120, 22 120, 22 110" class="logo-white-stroke" stroke-linecap="round"/>
+  <!-- S Loop -->
+  <path d="M 50 48 C 22 40, 22 75, 50 78 C 22 82, 22 115, 48 105" class="logo-white-stroke" stroke-linecap="round"/>
+  <!-- C Loop -->
+  <path d="M 50 85 C 20 85, 20 125, 48 125" class="logo-white-stroke" stroke-linecap="round"/>
+
+  <!-- Brand Name Typography -->
+  <text x="85" y="48" class="logo-text-serif" font-size="40" font-weight="500">Dr. José</text>
+  <text x="85" y="93" class="logo-text-serif" font-size="46" font-weight="500">Salim Cury</text>
+  <text x="86" y="125" class="logo-text-sans" font-size="14">CIRURGIA PLÁSTICA</text>
+</svg>

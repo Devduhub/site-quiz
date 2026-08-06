@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <title>Pré-Atendimento Exclusivo | Dr. José Salim Cury - Cirurgia Plástica SP</title>
+
+  <!-- SEO & Open Graph Meta Tags -->
+  <meta name="description" content="Responda a este pré-atendimento inteligente e descubra o tratamento ideal para o seu objetivo. Atendimento exclusivo com o Dr. José Salim Cury na Vila Olímpia, São Paulo.">
+  <meta name="keywords" content="Dr José Salim Cury, cirurgia plastica vila olimpia, facelift sao paulo, ritidoplastia, lipo HD, mommy makeover, Ivo Pitanguy">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://drjosesalimcury.com.br/quiz">
+
+  <!-- Open Graph / Facebook / WhatsApp -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Pré-Atendimento Exclusivo | Dr. José Salim Cury - Cirurgia Plástica">
+  <meta property="og:description" content="Preservar quem você sempre foi. Qualifique seu objetivo em menos de 1 minuto para um atendimento personalizado.">
+  <meta property="og:image" content="/logo.svg">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Favicon & PWA -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#A3875B">
+
+  <!-- Google Fonts: Cormorant Garamond (Serif Luxury) & Plus Jakarta Sans (Clean Modern) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/src/css/variables.css">
+  <link rel="stylesheet" href="/src/css/base.css">
+  <link rel="stylesheet" href="/src/css/components.css">
+  <link rel="stylesheet" href="/src/css/animations.css">
+
+  <!-- JSON-LD Structured Data for Medical Practice SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Physician",
+    "name": "Dr. José Salim Cury",
+    "medicalSpecialty": "PlasticSurgery",
+    "image": "/logo.svg",
+    "telephone": "+5511942309977",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua Elvira Ferraz, 250",
+      "addressLocality": "Vila Olímpia",
+      "addressRegion": "SP",
+      "addressCountry": "BR"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "113"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <div class="app-container">
+    
+    <!-- Official Clinic Header with Logo -->
+    <header class="site-header">
+      <img src="/logo.svg" alt="Dr. José Salim Cury - Cirurgia Plástica" class="brand-logo-img" width="240" height="95">
+      <div class="brand-badge">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        Escola Ivo Pitanguy • Vila Olímpia, SP
+      </div>
+    </header>
+
+    <!-- Navigation & Progress Bar Header -->
+    <nav class="quiz-nav-bar" id="quiz-nav-bar" style="display: none;" aria-label="Navegação do Quiz">
+      <button type="button" class="btn-back" id="btn-back" aria-label="Voltar para a pergunta anterior">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Voltar
+      </button>
+      <div class="progress-container">
+        <div class="progress-info">
+          <span>Pré-Atendimento</span>
+          <span id="progress-text">0% concluído</span>
+        </div>
+        <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Mobile Screen Container -->
+    <main class="quiz-card" id="quiz-card-content">
+
+      <!-- STEP 0: Welcome / Intro Screen -->
+      <section class="quiz-step active animate-fade-in" data-step="0" aria-labelledby="step-0-heading">
+        <h2 id="step-0-heading" class="step-title">Descubra qual é o melhor caminho para alcançar o resultado que você procura.</h2>
+        <p class="step-subtitle">Responda algumas perguntas rápidas. Em menos de 1 minuto entenderemos seu objetivo para oferecer um atendimento mais personalizado.</p>
+
+        <!-- Core Brand Pillars Grid -->
+        <div class="pillars-grid">
+          <div class="pillar-card">
+            <div class="pillar-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <div>
+              <div class="pillar-title">Consulta Exclusiva</div>
+              <div class="pillar-desc">Mínimo de 1 hora individual com o Dr. José Salim Cury.</div>
+            </div>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v16"/><path d="M9 7h6M9 11h6M9 15h6"/></svg>
+            </div>
+            <div>
+              <div class="pillar-title">Hospitais de Excelência</div>
+              <div class="pillar-desc">Procedimentos nos melhores centros hospitalares de São Paulo.</div>
+            </div>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <div>
+              <div class="pillar-title">Logística Integrada</div>
+              <div class="pillar-desc">Estrutura completa para pacientes de outras cidades e exterior.</div>
+            </div>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <div>
+              <div class="pillar-title">Pós-Operatório Próprio</div>
+              <div class="pillar-desc">Acompanhamento de perto por equipe especializada dedicada.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Action Button -->
+        <button type="button" class="btn-primary" id="btn-start-quiz">
+          Começar Pré-Atendimento
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+
+        <!-- Social Proof Strip -->
+        <div class="social-proof-strip">
+          <div class="social-proof-item">
+            <span class="stars-rating">★★★★★</span>
+            <strong>5.0 no Google</strong> (113 avaliações)
+          </div>
+          <div class="social-proof-item">
+            <span>• Destaque CARAS Brasil</span>
+          </div>
+          <div class="social-proof-item">
+            <span>• RepOcean Verificado</span>
+          </div>
+        </div>
+
+        <div class="footer-note">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          Suas informações são tratadas com total confidencialidade.
+        </div>
+      </section>
+
+      <!-- STEP 1: Question 1 -->
+      <section class="quiz-step" data-step="1">
+        <div class="step-indicator-pill">Pergunta 1 de 5</div>
+        <h2 class="step-title">Qual resultado você deseja alcançar?</h2>
+        <p class="step-subtitle">Selecione o objetivo que melhor descreve a sua busca atual.</p>
+
+        <div class="options-grid">
+          <button type="button" class="option-card" data-value="Quero rejuvenescer meu rosto">
+            <span>Quero rejuvenescer meu rosto</span>
+            <div class="option-icon-indicator">✓</div>
+          </button>
+          <button type="button" class="option-card" data-value="Melhorar meu contorno corporal">
+            <span>Melhorar meu contorno corporal</span>
+            <div class="option-icon-indicator">✓</div>
+          </button>
+          <button type="button" class="option-card" data-value="Corrigir alterações após gravidez">
+            <span>Corrigir alterações após gravidez</span>
+            <div class="option-icon-indicator">✓</div>
+          </button>
+          <button type="button" class="option-card" data-value="Melhorar a aparência das mamas">
+            <span>Melhorar a aparência das mamas</span>
+            <div class="option-icon-indicator">✓</div>
+          </button>
+          <button type="button" class="option-card" data-value="Outro objetivo" data-custom="true">
+            <span>Outro objetivo</span>
+            <div class="option-icon-indicator">✓</div>
+          </button>
+        </div>
+
+        <!-- Custom Input Container (Triggered if 'Outro objetivo' is selected) -->
+        <div class="custom-queixa-container" id="custom-queixa-box">
+          <label for="input-custom-queixa" class="form-label">Conte brevemente qual é seu objetivo:</label>
+          <textarea id="input-custom-queixa" class="custom-queixa-input" placeholder="Descreva aqui sua principal queixa ou o procedimento desejado..."></textarea>
+          <button type="button" class="btn-primary btn-confirm-custom">
+            Continuar
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+
+        <div class="trust-banner-mini">
+          <svg class="trust-banner-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span>Formação na Escola Ivo Pitanguy com foco em elegância e naturalidade.</span>
+        </div>
+      </section>
+
+      <!-- STEP 2: Question 2 -->
+      <section class="quiz-step" data-step="2">
+        <div class="step-indicator-pill">Pergunta 2 de 5</div>
+        <h2 class="step-title">Você já realizou algum atendimento conosco?</h2>
+        <p class="step-subtitle">Para direcionarmos seu histórico de forma adequada.</p>
+
+        <div class="options-grid">
+          <button type="button" class="option-card" data-value="Primeira vez">
+            <span>Primeira vez</span>
+            <div class="option-icon-indicator">✓</div>
+          </button>
+          <button type="button" class="option-card" data-value="Já sou paciente">
+            <span>Já sou paciente</span>
+            <div class="option-icon-indicator">✓</div>
+          </button>
+        </div>
+
+        <div class="trust-banner-mini">
+          <svg class="trust-banner-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <span>Consultas exclusivas individuais de 1 hora com o Dr. José Salim Cury.</span>
+        </div>
+      </section>
+
+      <!-- STEP 3: Question 3 -->
+      <section class="quiz-step" data-step="3">
+        <div class="step-indicator-pill">Pergunta 3 de 5</div>
+        <h2 class="step-title">De onde você pretende realizar seu atendimento?</h2>
+        <p class="step-subtitle">Oferecemos logística completa para pacientes de outras regiões.</p>
+
+        <div class="options-grid">
+          <button type="button" class="option-card" data-value="São Paulo">
+            <span>São Paulo (Capital / Região Metropolitana)</span>
+            <div class="option-icon-indicator">✓</div>
+          </button>
+          <button type="button" class="option-card" data-value="Outra cidade">
+            <span>Outra cidade (Suporte a deslocamento)</span>
+            <div class="option-icon-indicator">✓</div>
+          </button>
+          <button type="button" class="option-card" data-value="Outro país">
+            <span>Outro país (Atendimento internacional)</span>
+            <div class="option-icon-indicator">✓</div>
+          </button>
+        </div>
+
+        <div class="trust-banner-mini">
+          <svg class="trust-banner-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v16"/><path d="M9 7h6M9 11h6M9 15h6"/></svg>
+          <span>Procedimentos realizados nos hospitais de mais alto padrão em São Paulo.</span>
+        </div>
+      </section>
+
+      <!-- STEP 4: Question 4 -->
+      <section class="quiz-step" data-step="4">
+        <div class="step-indicator-pill">Pergunta 4 de 5</div>
+        <h2 class="step-title">Em que momento você está?</h2>
+        <p class="step-subtitle">Assim conseguimos priorizar as opções de agendamento.</p>
+
+        <div class="options-grid">
+          <button type="button" class="option-card" data-value="Já decidi fazer">
+            <span>Já decidi fazer (Quero agendar consulta)</span>
+            <div class="option-icon-indicator">✓</div>
+          </button>
+          <button type="button" class="option-card" data-value="Estou pesquisando">
+            <span>Estou pesquisando (Tirando dúvidas)</span>
+            <div class="option-icon-indicator">✓</div>
+          </button>
+          <button type="button" class="option-card" data-value="Tenho uma data especial">
+            <span>Tenho uma data especial em mente</span>
+            <div class="option-icon-indicator">✓</div>
+          </button>
+        </div>
+
+        <div class="trust-banner-mini">
+          <svg class="trust-banner-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          <span>Pós-operatório acompanhado de perto com equipe técnica própria.</span>
+        </div>
+      </section>
+
+      <!-- STEP 5: Question 5 -->
+      <section class="quiz-step" data-step="5">
+        <div class="step-indicator-pill">Pergunta 5 de 5</div>
+        <h2 class="step-title">Como conheceu o Dr. José Salim Cury?</h2>
+        <p class="step-subtitle">Saber disso nos ajuda a aprimorar constantemente nossa recepção.</p>
+
+        <div class="options-grid">
+          <button type="button" class="option-card" data-value="Indicação médica">
+            <span>Indicação médica</span>
+            <div class="option-icon-indicator">✓</div>
+          </button>
+          <button type="button" class="option-card" data-value="Indicação de amigo">
+            <span>Indicação de amigo / paciente</span>
+            <div class="option-icon-indicator">✓</div>
+          </button>
+          <button type="button" class="option-card" data-value="Redes sociais">
+            <span>Redes sociais (Instagram / TikTok)</span>
+            <div class="option-icon-indicator">✓</div>
+          </button>
+          <button type="button" class="option-card" data-value="Pesquisa no Google">
+            <span>Pesquisa no Google</span>
+            <div class="option-icon-indicator">✓</div>
+          </button>
+          <button type="button" class="option-card" data-value="Evento">
+            <span>Evento / Imprensa (CARAS)</span>
+            <div class="option-icon-indicator">✓</div>
+          </button>
+          <button type="button" class="option-card" data-value="Outro">
+            <span>Outro</span>
+            <div class="option-icon-indicator">✓</div>
+          </button>
+        </div>
+
+        <div class="trust-banner-mini">
+          <svg class="trust-banner-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <span>Reputaçāo consolidada com nota 5.0 no Google e mais de 10 anos de atuação.</span>
+        </div>
+      </section>
+
+      <!-- STEP 6: Lead Form -->
+      <section class="quiz-step" data-step="6">
+        <div class="step-indicator-pill">Passo Final</div>
+        <h2 class="step-title">Para finalizar, como podemos falar com você?</h2>
+        <p class="step-subtitle">Informe seus dados de contato para direcionarmos seu pré-atendimento.</p>
+
+        <form id="form-lead" class="lead-form" novalidate>
+          <div class="form-group">
+            <label for="name-input" class="form-label">Nome Completo *</label>
+            <input type="text" id="name-input" class="form-input" placeholder="Digite seu nome completo" required autocomplete="name">
+            <span class="error-message" id="err-name">Por favor, informe seu nome completo.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="phone-input" class="form-label">WhatsApp *</label>
+            <input type="tel" id="phone-input" class="form-input" placeholder="(11) 99999-9999" required autocomplete="tel">
+            <span class="error-message" id="err-phone">Por favor, informe um número de WhatsApp válido com DDD.</span>
+          </div>
+
+          <button type="submit" class="btn-primary" id="btn-submit-lead">
+            Finalizar e Ver Resultado
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </form>
+
+        <div class="footer-note">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          Ambiente seguro. Seus dados são confidenciais e protegidos pela LGPD.
+        </div>
+      </section>
+
+      <!-- STEP 7: Loading Screen -->
+      <section class="quiz-step" data-step="7">
+        <div class="loading-view">
+          <div class="loader-ring"></div>
+          <h2 class="loader-status">Estamos preparando seu atendimento personalizado.</h2>
+          <p class="step-subtitle">Em seguida você será direcionado para nossa equipe via WhatsApp...</p>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Global Footer -->
+    <footer style="margin-top: 20px; text-align: center; font-size: 0.875rem; font-weight: 600; color: #334155;">
+      <p>Dr. José Salim Cury • Cirurgião Plástico CRM-SP</p>
+      <p style="margin-top: 2px; color: #475569; font-weight: 500;">Rua Elvira Ferraz, 250 - Vila Olímpia - São Paulo - SP</p>
+    </footer>
+
+  </div>
+
+  <!-- Main JavaScript Module -->
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>

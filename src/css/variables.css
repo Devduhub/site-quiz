@@ -1,0 +1,50 @@
+:root {
+  /* Official Dr. José Salim Cury Color Palette - High Contrast Light Luxury */
+  --gold-header: #A3875B;
+  --gold-primary: #A3875B;
+  --gold-light: #B59868;
+  --gold-lighter: #EFE7DA;
+  --gold-subtle: #F5F0E6;
+  --gold-dark: #7D6338;
+  
+  --gold-gradient: linear-gradient(135deg, #B59868 0%, #A3875B 50%, #8E7246 100%);
+  --gold-glow: rgba(163, 135, 91, 0.25);
+  --gold-border: rgba(163, 135, 91, 0.45);
+  --gold-border-focus: #7D6338;
+
+  /* Background Colors - Clean White & Warm Off-White/Beige */
+  --bg-primary: #FAF8F5;
+  --bg-secondary: #FFFFFF;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #F6F0E6;
+  --bg-card-active: #EFE3CE;
+
+  /* Text Colors - High Contrast Dark Charcoal & Sharp Readable Text */
+  --text-main: #0F172A;
+  --text-muted: #334155;
+  --text-subtle: #475569;
+  --text-gold: #8E7246;
+  --text-on-gold: #FFFFFF;
+
+  /* Accent & Glass */
+  --border-subtle: #DDD5C7;
+  --border-card: #C8B9A6;
+  --glass-blur: blur(12px);
+  --glass-shadow: 0 20px 40px -15px rgba(163, 135, 91, 0.15), 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+
+  /* Typography */
+  --font-serif: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Layout */
+  --max-width: 720px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}

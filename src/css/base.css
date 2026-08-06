@@ -1,0 +1,84 @@
+/* Global CSS Reset & Setup - High Visibility & Readability */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: 
+    radial-gradient(circle at 50% 0%, rgba(200, 178, 147, 0.25) 0%, transparent 65%),
+    radial-gradient(circle at 50% 100%, rgba(163, 135, 91, 0.15) 0%, transparent 55%),
+    var(--bg-primary);
+  background-attachment: fixed;
+  color: var(--text-main);
+  padding: 12px 12px calc(16px + env(safe-area-inset-bottom));
+  overflow-x: hidden;
+}
+
+/* App Wrapper: Max-width 720px, Mobile viewport centered */
+.app-container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 24px);
+  min-height: calc(100dvh - 24px);
+  justify-content: space-between;
+}
+
+/* Typography Helpers - Sharp High Contrast */
+h1, h2, h3, .font-serif {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--text-main);
+}
+
+p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+a {
+  color: var(--gold-dark);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--gold-primary);
+}
+
+button, input, textarea {
+  font-family: inherit;
+}
+
+/* Accessibility Focus Ring */
+:focus-visible {
+  outline: 2px solid var(--gold-primary);
+  outline-offset: 3px;
+}
