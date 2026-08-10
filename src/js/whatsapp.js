@@ -7,6 +7,8 @@ export function buildWhatsAppUrl(payload) {
   const nome = payload.nome || 'Paciente';
   const procedimento = payload.procedimento_interesse || 'Consultoria de Cirurgia Plástica';
   const queixa = payload.queixa_principal || procedimento;
+  const historico = payload.historico_cirurgico || 'Não informado';
+  const preocupacao = payload.preocupacao_principal || 'Não informado';
   const pacienteStatus = payload.paciente_novo_ou_recorrente || 'Primeira vez';
   const origemGeo = payload.origem_geografica || 'São Paulo';
   const momentoUrgencia = payload.urgencia || 'Estou pesquisando';
@@ -17,8 +19,9 @@ export function buildWhatsAppUrl(payload) {
 Olá! Acabei de concluir o formulário de pré-atendimento no site do Dr. José Salim Cury.
 
 👤 *Nome:* ${nome}
-🩺 *Interesse:* ${procedimento}
-💬 *Queixa / Objetivo:* ${queixa}
+🩺 *Queixa / Objetivo:* ${queixa}
+🔍 *Histórico de Cirurgias:* ${historico}
+🛡️ *Maior Preocupação:* ${preocupacao}
 📋 *Perfil:* ${pacienteStatus}
 📍 *Origem:* ${origemGeo}
 ⏳ *Momento:* ${momentoUrgencia}

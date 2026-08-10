@@ -1,44 +1,41 @@
-/* Header & Official Logo Branding Bar - High Contrast & Visibility */
-.site-header {
-  padding: 22px 20px;
+/* ===== WELCOME SCREEN (Step 0) ===== */
+.welcome-logo-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 44px 24px 36px;
+  background: var(--gold-gradient);
+  border-bottom: 1.5px solid var(--border-subtle);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  flex-shrink: 0;
+}
+
+.welcome-logo {
+  max-width: 270px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  filter: brightness(0) invert(1) drop-shadow(0 2px 8px rgba(0,0,0,0.22));
+}
+
+.welcome-body {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background: linear-gradient(135deg, #B59868 0%, #A3875B 50%, #8E7246 100%);
-  border-radius: var(--radius-lg);
-  margin-bottom: 16px;
-  box-shadow: 0 10px 25px -5px rgba(142, 114, 70, 0.35);
-  color: #FFFFFF;
-}
-
-.brand-logo-img {
-  max-width: 290px;
+  padding: 36px 24px 44px;
   width: 100%;
-  height: auto;
-  margin-bottom: 8px;
-  filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.3));
 }
 
-@media (max-width: 480px) {
-  .brand-logo-img {
-    max-width: 250px;
-  }
-}
-
-.brand-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  margin-top: 6px;
-  padding: 6px 16px;
-  border-radius: var(--radius-full);
-  background: rgba(0, 0, 0, 0.2);
-  border: 1.5px solid rgba(255, 255, 255, 0.45);
-  font-size: 0.825rem;
-  color: #FFFFFF;
-  font-weight: 600;
-  backdrop-filter: blur(4px);
+.welcome-divider {
+  width: 44px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #C4A97A 50%, transparent);
+  margin-bottom: 24px;
+  opacity: 0.85;
+  flex-shrink: 0;
 }
 
 /* Progress Header Navigation */
@@ -47,7 +44,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
   min-height: 40px;
 }
 
@@ -111,7 +108,7 @@
   box-shadow: 0 0 10px rgba(163, 135, 91, 0.5);
 }
 
-/* Central Card Component - High Contrast & Crisp Readable Typography */
+/* Central Card Component */
 .quiz-card {
   background: var(--bg-card);
   border: 1.5px solid var(--border-card);
@@ -121,15 +118,23 @@
   position: relative;
   overflow: hidden;
   transition: all var(--transition-normal);
-  flex: 1;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
+/* When step-0 is active, remove card padding so welcome sections can fill edge-to-edge */
+.quiz-card:has(.quiz-step[data-step="0"].active) {
+  padding: 0;
+}
+
 @media (max-width: 480px) {
   .quiz-card {
     padding: 24px 18px;
+  }
+  .quiz-card:has(.quiz-step[data-step="0"].active) {
+    padding: 0;
   }
 }
 
@@ -141,6 +146,40 @@
 
 .quiz-step.active {
   display: flex;
+}
+
+.quiz-step[data-step="0"].active {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 0;
+}
+
+.quiz-step[data-step="0"] .step-title {
+  font-family: var(--font-serif);
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #1A140F;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+}
+
+.quiz-step[data-step="0"] .step-subtitle {
+  font-size: 0.975rem;
+  color: #5C5245;
+  margin-bottom: 32px;
+  font-weight: 500;
+  line-height: 1.5;
+  max-width: 340px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.quiz-step[data-step="0"] .btn-primary {
+  margin-top: 0;
+  width: 100%;
+  max-width: 340px;
 }
 
 /* Step Number Badge */

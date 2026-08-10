@@ -24,27 +24,25 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
+  padding: 24px 12px;
   background: 
     radial-gradient(circle at 50% 0%, rgba(200, 178, 147, 0.25) 0%, transparent 65%),
     radial-gradient(circle at 50% 100%, rgba(163, 135, 91, 0.15) 0%, transparent 55%),
     var(--bg-primary);
   background-attachment: fixed;
   color: var(--text-main);
-  padding: 12px 12px calc(16px + env(safe-area-inset-bottom));
   overflow-x: hidden;
 }
 
-/* App Wrapper: Max-width 720px, Mobile viewport centered */
+/* App Wrapper: Mobile viewport centered */
 .app-container {
   width: 100%;
   max-width: var(--max-width);
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - 24px);
-  min-height: calc(100dvh - 24px);
-  justify-content: space-between;
+  gap: 12px;
 }
 
 /* Typography Helpers - Sharp High Contrast */

@@ -1,10 +1,12 @@
 import { CONFIG } from './config.js';
 
 const initialState = {
-  currentStep: 0, // 0 = Intro, 1 = Q1, 2 = Q2, 3 = Q3, 4 = Q4, 5 = Q5, 6 = Form, 7 = Loading
+  currentStep: 0, // 0 = Intro, 1..7 = Q1..Q7, 8 = Form, 9 = Loading
   answers: {
     procedimento_interesse: '',
     queixa_principal: '',
+    historico_cirurgico: '',
+    preocupacao_principal: '',
     paciente_novo_ou_recorrente: '',
     origem_geografica: '',
     urgencia: '',
@@ -25,8 +27,8 @@ class QuizState {
       const saved = localStorage.getItem(CONFIG.STORAGE_KEY);
       if (saved) {
         const parsed = JSON.parse(saved);
-        // Don't restore if already completed (step 7)
-        if (parsed.currentStep >= 7) {
+        // Don't restore if already completed (step 9)
+        if (parsed.currentStep >= 9) {
           return { ...initialState };
         }
         return { ...initialState, ...parsed };
