@@ -66,10 +66,10 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    // Number keys 1-6 for option selection on Question steps 1..7
-    if (currentStep >= 1 && currentStep <= 7) {
+    // Number keys 1-6 for option selection on Question steps 1..8
+    if (currentStep >= 1 && currentStep <= 8) {
       const num = parseInt(e.key, 10);
-      if (!isNaN(num) && num >= 1 && num <= 7) {
+      if (!isNaN(num) && num >= 1 && num <= 8) {
         const activeStepEl = document.querySelector(`.quiz-step[data-step="${currentStep}"]`);
         if (activeStepEl) {
           const options = activeStepEl.querySelectorAll('.option-card');
@@ -101,14 +101,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const currentStep = quizState.getStep();
 
     // 1. Update Progress Header
-    if (currentStep === 0 || currentStep === 9) {
+    if (currentStep === 0 || currentStep === 10) {
       navBar.style.display = 'none';
     } else {
       navBar.style.display = 'flex';
       btnBack.style.display = currentStep > 0 ? 'inline-flex' : 'none';
       
-      // Calculate progress percentage: Steps 1..7 map to questions progress, step 8 is form (100%)
-      const percentage = Math.min(100, Math.round((Math.min(7, currentStep) / 7) * 100));
+      // Calculate progress percentage: Steps 1..8 map to questions progress, step 9 is form (100%)
+      const percentage = Math.min(100, Math.round((Math.min(8, currentStep) / 8) * 100));
       progressFill.style.width = `${percentage}%`;
       progressText.textContent = `${percentage}% concluído`;
     }
@@ -122,16 +122,16 @@ document.addEventListener('DOMContentLoaded', () => {
     if (activeStep) {
       activeStep.classList.add('active', 'animate-fade-in');
       
-      // If entering Step 1..7, bind option selection handlers
-      if (currentStep >= 1 && currentStep <= 7) {
+      // If entering Step 1..8, bind option selection handlers
+      if (currentStep >= 1 && currentStep <= 8) {
         setupQuestionStep(activeStep, currentStep);
-      } else if (currentStep === 8) {
-        // Step 8: Form fields pre-fill if existing
+      } else if (currentStep === 9) {
+        // Step 9: Form fields pre-fill if existing
         const answers = quizState.getAnswers();
         if (inputName && answers.nome) inputName.value = answers.nome;
         if (inputPhone && answers.whatsapp) inputPhone.value = answers.whatsapp;
-      } else if (currentStep === 9) {
-        // Step 9: Processing & Redirection sequence
+      } else if (currentStep === 10) {
+        // Step 10: Processing & Redirection sequence
         triggerCompletionSequence();
       }
     }
@@ -231,8 +231,8 @@ document.addEventListener('DOMContentLoaded', () => {
       whatsapp: phoneVal
     });
 
-    // Transition to loading step 9
-    goToStep(9);
+    // Transition to loading step 10
+    goToStep(10);
   }
 
   function validateFormInputs(showErrors = false) {

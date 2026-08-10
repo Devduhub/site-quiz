@@ -33,6 +33,7 @@ export async function sendLeadWebhook(payload) {
     whatsapp: formatE164Phone(payload.whatsapp),
     procedimento_interesse: payload.procedimento_interesse || '',
     queixa_principal: payload.queixa_principal || payload.procedimento_interesse || '',
+    impacto_autoestima: payload.impacto_autoestima || '',
     paciente_novo_ou_recorrente: payload.paciente_novo_ou_recorrente || '',
     origem_geografica: payload.origem_geografica || '',
     urgencia: payload.urgencia || '',
