@@ -1,42 +1,172 @@
-/* ===== WELCOME SCREEN (Step 0) ===== */
-.welcome-logo-wrap {
+/* ===== WELCOME SCREEN (Step 0) - Two-Card Premium Layout ===== */
+
+/* Standalone Logo Card - floats above the content card */
+.welcome-logo-card {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 44px 24px 36px;
-  background: var(--gold-gradient);
-  border-bottom: 1.5px solid var(--border-subtle);
-  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  padding: 24px 20px;
+  background: linear-gradient(145deg, #2A221B 0%, #1A140F 100%);
+  border: 1.5px solid #C4A97A;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
   flex-shrink: 0;
+  transition: all var(--transition-normal);
+}
+
+/* Subtle inner glow on logo card */
+.welcome-logo-card::before {
+  content: '';
+  position: absolute;
+  top: -40%;
+  left: -20%;
+  width: 70%;
+  height: 180%;
+  background: radial-gradient(ellipse, rgba(196, 169, 122, 0.15) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.welcome-logo-card.hidden {
+  display: none;
 }
 
 .welcome-logo {
-  max-width: 270px;
+  max-width: 260px;
   width: 100%;
   height: auto;
   display: block;
   margin: 0 auto;
-  filter: brightness(0) invert(1) drop-shadow(0 2px 8px rgba(0,0,0,0.22));
+  position: relative;
+  z-index: 1;
 }
 
+/* Content body inside Step 0 */
 .welcome-body {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 36px 24px 44px;
+  padding: 32px 24px 24px;
   width: 100%;
 }
 
 .welcome-divider {
-  width: 44px;
+  width: 50px;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #C4A97A 50%, transparent);
-  margin-bottom: 24px;
-  opacity: 0.85;
+  background: #C4A97A;
+  margin: 0 auto 18px;
+  border-radius: 2px;
+  opacity: 1;
   flex-shrink: 0;
 }
+
+/* Welcome screen title overrides */
+.welcome-title {
+  font-family: var(--font-serif) !important;
+  font-size: 1.65rem !important;
+  font-weight: 700 !important;
+  line-height: 1.3 !important;
+  color: #1A140F !important;
+  margin-bottom: 10px !important;
+  letter-spacing: -0.01em !important;
+}
+
+@media (max-width: 400px) {
+  .welcome-title {
+    font-size: 1.45rem !important;
+  }
+}
+
+/* Welcome screen subtitle overrides */
+.welcome-subtitle {
+  font-size: 0.925rem !important;
+  color: #4A4035 !important;
+  margin-bottom: 22px !important;
+  font-weight: 500 !important;
+  line-height: 1.5 !important;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Trust strip below the CTA button */
+.welcome-trust-strip {
+  width: 100%;
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid #C8B9A6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.trust-proof-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.trust-proof-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.trust-proof-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.trust-dot {
+  color: #A3875B;
+  font-size: 1.1rem;
+  line-height: 1;
+  margin-right: 2px;
+}
+
+.trust-confidential {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  color: #475569;
+  font-weight: 500;
+}
+
+.trust-confidential svg {
+  color: #A3875B;
+  flex-shrink: 0;
+}
+
+/* Doctor address footer at the very bottom of welcome screen */
+.welcome-doctor-footer {
+  width: 100%;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid #C8B9A6;
+  text-align: center;
+}
+
+.welcome-doctor-footer p {
+  font-size: 0.82rem;
+  color: #5C5245;
+  font-weight: 600;
+  line-height: 1.6;
+  margin: 0;
+}
+
 
 /* Progress Header Navigation */
 .quiz-nav-bar {
@@ -127,6 +257,7 @@
 /* When step-0 is active, remove card padding so welcome sections can fill edge-to-edge */
 .quiz-card:has(.quiz-step[data-step="0"].active) {
   padding: 0;
+  border: 1.5px solid var(--border-card);
 }
 
 @media (max-width: 480px) {
@@ -137,6 +268,7 @@
     padding: 0;
   }
 }
+
 
 .quiz-step {
   display: none;
@@ -157,20 +289,20 @@
 
 .quiz-step[data-step="0"] .step-title {
   font-family: var(--font-serif);
-  font-size: 1.9rem;
+  font-size: 1.75rem;
   font-weight: 700;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   color: #1A140F;
-  line-height: 1.25;
+  line-height: 1.3;
   letter-spacing: -0.015em;
 }
 
 .quiz-step[data-step="0"] .step-subtitle {
-  font-size: 0.975rem;
+  font-size: 0.95rem;
   color: #5C5245;
-  margin-bottom: 32px;
+  margin-bottom: 28px;
   font-weight: 500;
-  line-height: 1.5;
+  line-height: 1.6;
   max-width: 340px;
   margin-left: auto;
   margin-right: auto;
@@ -181,6 +313,7 @@
   width: 100%;
   max-width: 340px;
 }
+
 
 /* Step Number Badge */
 .step-indicator-pill {
