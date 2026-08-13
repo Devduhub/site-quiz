@@ -15,12 +15,12 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Pré-Atendimento Exclusivo | Dr. José Salim Cury - Cirurgia Plástica">
   <meta property="og:description" content="Preservar quem você sempre foi. Qualifique seu objetivo em menos de 1 minuto para um atendimento personalizado.">
-  <meta property="og:image" content="/logo.png">
+  <meta property="og:image" content="./logo.png">
   <meta property="og:locale" content="pt_BR">
 
   <!-- Favicon & PWA -->
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="manifest" href="./site.webmanifest">
   <meta name="theme-color" content="#A3875B">
 
   <!-- Google Fonts: Cormorant Garamond (Serif Luxury) & Plus Jakarta Sans (Clean Modern) -->
@@ -29,10 +29,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="/src/css/variables.css">
-  <link rel="stylesheet" href="/src/css/base.css">
-  <link rel="stylesheet" href="/src/css/components.css">
-  <link rel="stylesheet" href="/src/css/animations.css">
+  <link rel="stylesheet" href="./src/css/variables.css">
+  <link rel="stylesheet" href="./src/css/base.css">
+  <link rel="stylesheet" href="./src/css/components.css">
+  <link rel="stylesheet" href="./src/css/animations.css">
 
   <!-- JSON-LD Structured Data for Medical Practice SEO -->
   <script type="application/ld+json">
@@ -62,6 +62,11 @@
 
   <div class="app-container">
 
+    <!-- LOGO CARD — Separate floating card above content (Step 0 only) -->
+    <div class="welcome-logo-card" id="welcome-logo-card" aria-hidden="true">
+      <img src="./logo.png" alt="Dr. José Salim Cury - Cirurgia Plástica" class="welcome-logo" width="280" height="103">
+    </div>
+
     <!-- Main Mobile Screen Container -->
     <main class="quiz-card" id="quiz-card-content">
 
@@ -85,19 +90,45 @@
       <!-- STEP 0: Welcome / Intro Screen -->
       <section class="quiz-step active animate-fade-in" data-step="0" aria-labelledby="step-0-heading">
 
-        <!-- Logo Header Area -->
-        <div class="welcome-logo-wrap">
-          <img src="/logo.png" alt="Dr. José Salim Cury - Cirurgia Plástica" class="welcome-logo" width="280" height="103">
-        </div>
-
         <!-- Content Body -->
         <div class="welcome-body">
           <div class="welcome-divider"></div>
-          <h2 id="step-0-heading" class="step-title">A harmonia e naturalidade que sua beleza merece</h2>
+          <h2 id="step-0-heading" class="step-title welcome-title">Descubra qual é o melhor caminho para alcançar o resultado que você procura.</h2>
+          <p class="step-subtitle welcome-subtitle">Em menos de 1 minuto, encontramos o caminho ideal para você.</p>
+
           <button type="button" class="btn-primary" id="btn-start-quiz">
             Começar Pré-Atendimento
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </button>
+
+          <!-- Social Proof & Trust Signals -->
+          <div class="welcome-trust-strip">
+            <div class="trust-proof-row">
+              <div class="trust-proof-item">
+                <span class="stars-rating" aria-label="5 estrelas">★★★★★</span>
+                <span class="trust-proof-label"><strong>5.0 no Google</strong> (113 avaliações)</span>
+              </div>
+              <span class="trust-dot" aria-hidden="true">•</span>
+              <div class="trust-proof-item">
+                <span class="trust-proof-label">Destaque CARAS Brasil</span>
+              </div>
+              <span class="trust-dot" aria-hidden="true">•</span>
+              <div class="trust-proof-item">
+                <span class="trust-proof-label">RepOcean Verificado</span>
+              </div>
+            </div>
+
+            <div class="trust-confidential">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <span>Suas informações são tratadas com total confidencialidade.</span>
+            </div>
+          </div>
+
+          <!-- Doctor Footer Info -->
+          <div class="welcome-doctor-footer">
+            <p>Dr. José Salim Cury • Cirurgião Plástico CRM-SP</p>
+            <p>Rua Elvira Ferraz, 250 – Vila Olímpia – São Paulo – SP</p>
+          </div>
         </div>
 
       </section>
@@ -355,6 +386,6 @@
   </div>
 
   <!-- Main JavaScript Module -->
-  <script type="module" src="/src/js/main.js"></script>
+  <script type="module" src="./src/js/main.js"></script>
 </body>
 </html>
